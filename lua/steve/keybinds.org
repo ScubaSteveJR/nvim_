@@ -1,0 +1,50 @@
+h - move left
+j - move down
+k - move up
+l - move right
+w - beginning of next word
+b - beginning of previous word
+W - beginning of next word (skip '')
+B - beginning of previous word (skip '')
+e - end of the word
+0 or ^ - start of line
+$ - end of the line
+gg - beginning of doc
+G - end of doc
+num + up/down - move num lines up/down
+* - search doc for word under cursor
+SHIFT n - jump to next location of searched word
+y - yank
+yi + key - copy inside 'key'
+:reg - open the register (storage of yanked commands)
+" + num p - paste a specific yanked register
+p - paste forward
+P - paste backward
+x - delete
+D - delete from cursor to end of line
+d + vim motion - delete in direction
+daw - delete word and white space after
+dip - delete in paragraph
+da + key - delete around 'key'
+c - change (delete + go to insert)
+C - change from cursor to end of line
+ci + key - change inside 'key'
+ciw - change in word
+:%s/'word to change'/'word to change TO'/g - globally change a word in doc to something else
+:%s/'word to change'/'word to change TO'/gc - CONFIRM global change to each individual iteration
+/ - search
+o - insert to next line
+O - insert to previous line
+a - insert to right of char
+A - insert to end of line
+I - insert to beginning of line
+ddp - delete line, paste line below (swaps the line your on to the line below)
+CTRL v - visual block mode
+Macros:
+q + reg (can be any key) + keystring of commands + q - start recording, set macro key, list the command string, stop recording
+
+In insert mode:
+  CTRL w - delete previous word
+  CTRL h - delete previous char
+  CTRL u - delete entire line until the cursor
+  CTRL o - leader key to then use normal mode command

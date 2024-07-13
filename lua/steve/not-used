@@ -1,0 +1,40 @@
+-- return {
+-- 	"mfussenegger/nvim-dap",
+-- 	dependencies = {
+-- 		"rcarriga/nvim-dap-ui",
+-- 		"leoluz/nvim-dap-go",
+-- 		"nvim-neotest/nvim-nio",
+-- 	},
+-- 	config = function()
+-- 		local dap = require("dap")
+-- 		local dapui = require("dapui")
+--
+-- 		require("dapui").setup()
+-- 		require("dapui").open()
+-- 		require("dapui").close()
+-- 		require("dapui").toggle()
+-- 		require("dap-go").setup()
+--
+-- 		dap.listeners.before.attach["dapui_config"] = function()
+-- 			dapui.open()
+-- 		end
+-- 		dap.listeners.before.launch["dapui_config"] = function()
+-- 			dapui.open()
+-- 		end
+-- 		dap.listeners.after.event_breakpoint["dapui_config"] = function()
+-- 			dapui.open()
+-- 		end
+-- 		dap.listeners.before.event_terminated["dapui_config"] = function()
+-- 			dapui.close()
+-- 		end
+-- 		dap.listeners.before.event_exited["dapui_config"] = function()
+-- 			dapui.close()
+-- 		end
+--
+-- 		vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, { desc = "start debug point" })
+-- 		vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "continue in code" })
+-- 		vim.keymap.set("n", "<leader>dg", dap.restart, { desc = "restart" })
+-- 		vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "step into code" })
+-- 		vim.keymap.set("n", "<leader>do", dap.step_over, { desc = "step over code" })
+-- 	end,
+-- }
